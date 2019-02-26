@@ -38,7 +38,7 @@
 		</div>
 		<div class="input-group">
 			<label>Confirm password</label>
-			<input type="password" placeholder="Enter Password Again" name="password_2">
+			<input type="password" placeholder="Confirm Password" name="password_2">
 		</div>
 		<div class="input-group">
 			<button type="submit" class="btn" name="reg_user">Register</button>
