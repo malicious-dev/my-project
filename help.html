@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+            padding: 0;
+            margin: 0;
+        }
+
+        .head {
+            height: 40px;
+            width: 100%;
+            background-color: greenyellow;
+            color: ;
+        }
+
+        #head1 {
+            height: 120px;
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+
+        #heading {
+            height: 120px;
+            width: 100%;
+            background-color: gray;
+            color: red;
+            font-size: 80px;
+            font-family: ubuntu;
+            text-align: center;
+        }
+
+       
+
+        @media only screen and (max-width: 600px) {
+            #heading {
+                width: 100%;
+                height: auto;
+                float: none;
+            }
+
+            .columns {
+                width: 100%;
+
+            }
+
+            div.columns {
+                position: fixed;
+                top: 0;
+            }
+
+            #btech {
+                width: 90%;
+                margin-left: auto;
+            }
+
+            #head1 {
+                width: 100%;
+              
+            }
+        }
+
+        #btech {
+            margin-left: 30%;
+        }
+
+        div.columns {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding-top: 150px;
+
+        }
+
+        div#head1 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #555;
+            color: white;
+        }
+        
+        div a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        
+        div a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .note {
+            text-align: center;
+            float: right;
+            background-color: #3bba7f;
+            color:white;
+            width: 10%;
+            height: 37%;
+            font-size: 10px;
+            border-radius: 10px 0px 0px 10px;
+            margin-top: 29px;
+            font-family: ubuntu;
+            -webkit-transition: width 2000s;
+            transition: width 2s;
+            
+        }
+        div.note {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+        }
+        div.note:hover {
+            width: 150px;
+            width: 10%;
+            height: 31%;    
+            
+        }
+
+	 .note1 {
+            text-align: center;
+            float: left;
+            background-color: red;
+            color:white;
+            width: 20%;
+            height: 38%;
+         font-size: 10px;
+            border-radius: 10px 0px 0px 10px;
+            margin-top: 29px;
+            font-family: ubuntu;
+            -webkit-transition: width 2000s;
+            transition: width 2s;
+            margin-left: 10px;
+        }
+        div.note1 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 130px;
+        }
+        div.note:hover1 {
+            width: 200px;
+        }
+        .f {
+            height: 30px;
+            width: 30px;
+            margin-left: 9%;
+            margin-top: 1%;
+            position: absolute;
+        }
+        
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: ;
+  margin: ;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Overview {background-color: green;}
+#News {background-color: white;}
+#Contact {background-color: white;}
+#About {background-color: white;}
+
+ .button {
+        width: 100%;
+	background-color: green;
+
+
+}
+    #preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow: visible;
+    background:black url('text-animation-1s-411x151px.gif') no-repeat center center;
+ }
+
+#content {
+    display: none;
+}
+
+
+</style>
+    
+    
+    <script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+var preloader;
+
+function preload(opacity) {
+    if(opacity <= 0) {
+        showContent();
+    }
+    else {
+        preloader.style.opacity = opacity;
+        window.setTimeout(function() { preload(opacity - 0.05) }, 200);
+    }
+}
+
+function showContent() {
+    preloader.style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    preloader = document.getElementById('preloader');
+    preload(1);
+});    
+
+</script>
+    
+    
+</head>
+<body>
+    <div id="preloader"></div>
+    <div id="content">
+ 
+    
+    <div Id="head1">
+        <img src="image.png" height="130px" width="28%">
+        <div class="note"><h1><a href="#" style="text-decoration: none;">About</a></h1></div>
+    <div class="note"><h1><a href="#" style="text-decoration: none;">Courses</a></h1></div>
+    <div class="note"><h1><a href="#" style="text-decoration: none;">Department</a></h1></div>
+    <div class="note"><h1><a href="#" style="text-decoration: none;">Home</a></h1></div>    
+    </div>
+    <div Id="heading">Bachelor of Technology (B.tech)
+    </div>
+    	
+	<div class="note1"  onclick="openPage('Overview', this, '')"><h1><a href="#" style="text-decoration: none;">Course Overview</a></h1></div>
+    <div class="note1"  onclick="openPage('Eligibility', this, '')"><h1><a href="#" style="text-decoration: none;">Eligibility</a></h1></div>
+    <div class="note1"onclick="openPage('', this, '')"><h1><a href="#" style="text-decoration: none;">Course fee</a></h1></div>
+    <div class="note1" onclick="openPage('RD', this, '')"><h1><a href="#" style="text-decoration: none;">Required Department</a></h1></div> 
+    <div class="note1" onclick="openPage('', this, '')"><h1><a href="#" style="text-decoration: none;">Testimonial</a></h1></div>    
+    <div class="note1" onclick="openPage('', this, '')"><h1><a href="#" style="text-decoration: none;">Course Structure</a></h1></div>      
+
+<div id="Overview" class="tabcontent">
+  <h1 style="padding-bottom:40px; padding-top: 60px; font-size:30px; color: black;">Overview</h1>
+        <h2 style="padding-bottom:20px; color: gray;"><strong>B.Tech (Civil Engineering)</strong></h2>
+        <p style="font-size: 20px; color: gray; ">Civil Engineering involves planning, designing and executing structural works. The planning part of their work involves site investigation, feasibility studies, creating solutions to complications that may occur and the actual designing of structures. Construction work involves dealing with clients, architects, government officials, contractors and the supervision of work according to standards.</p>
+        <h2 style="padding-top: 40px; padding-bottom:20px; color: gray;"><strong>Career Opportunities</strong></h2>
+        <p style="font-size: 20px; color: gray; ">Civil engineer builds the world's infrastructure. A civil engineer can shape his/her career in</p>
+        <ul style="font-size: 20px; color: gray; padding-top: 20px; padding-left: 30px;">
+            <li style="padding-bottom: 5px; padding-top: 5px;">Government Departments</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Private and Public sector Industries</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Research and Academic Institutions</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Building Infrastructure</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Maintain and Repair existing facilities and structures</li>
+        </ul>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>B.Tech (Mechanical Engineering)</strong></h2>
+        <p style="font-size: 20px; color: gray; ">It is the branch of engineering that involves the production and usage of heat and mechanical power for the design, production, and operation of machines and tools.</p>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>Career Opportunities</strong></h2>
+        <ul style="font-size: 20px; color: gray; padding-top: 20px; padding-left: 30px;">
+            <li style="padding-bottom: 5px;">The work of a Mechanical Engineer is concerned with all type of machineries and all aspects of their mechanism and functioning.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Their work is not only to design & create new products, but also to develop required materials.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Biotechnology</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Material Sciences</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Nanotechnology</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Automobile Design</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Plant Engineering & Maintenance</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Pressure Vessels and Piping</li>
+        </ul>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>B.Tech (Computer Science & Engineering)</strong></h2>
+        <p style="font-size: 20px; color: gray; ">Computer Science includes study of computers, their design and use to computation, data processing, and system control, including design and development of computer hardware, software and programming.</p>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>Career Opportunities</strong></h2>
+        <p style="font-size: 20px; color: gray; ">World of computer has following two main streams-</p>
+        <ul style="font-size: 20px; color: gray; padding-top: 20px; padding-left: 30px;">
+            <li style="padding-bottom: 5px;">SOFTWARE ENGINEERING</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">§Software Development</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">§Analysts</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">§Support Services</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">HARDWARE ENGINEERING</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Research and Development</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Maintenance</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Services & Supports</li>
+        </ul>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>B.Tech (Information Technology)</strong></h2>
+        <p style="font-size: 20px; color: gray; ">Information Technology is the use of computer and softwares for storing, protecting, processing, transmitting and retrieving information as per requirement.</p>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>Career Opportunities</strong></h2>
+        <p style="font-size: 20px; color: gray; ">IT Professionals can make their career in following areas:</p>
+        <ul style="font-size: 20px; color: gray; padding-top: 20px; padding-left: 30px;">
+            <li style="padding-bottom: 5px;">Hardware: This includes the physical elements of the computer system and deals with the designing, manufacturing and maintenance of computers.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Software: This includes the set of instructions by which a computer is programmed for working and performing the specified tasks.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Computer Operations: It requires handling of computer peripherals along with other accessories like CD-ROMs, disk drives, printers etc.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Database Administration: It involves management and maintenance of data.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Sales and Marketing: The work here involves selling of the computer system and its marketing to different companies or individuals.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Data Center Management: It involves management of the dedicated facilities, which houses the critical servers and other networking and backup equipments.</li>
+        </ul>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>B.Tech (Electronics & Communication)
+
+            </strong></h2>
+        <p style="font-size: 20px; color: gray; ">It covers a wide range of applications which make our life easier and enjoyable such as Radio, Computers, Telecommunication etc. Electronics has a major role in improving productivity in industries like oil, energy, agriculture and so many other important sectors of economy.
+
+        </p>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>Career Opportunities</strong></h2>
+        <ul style="font-size: 20px; color: gray; padding-top: 20px; padding-left: 30px;">
+            <li style="padding-bottom: 5px;">Design, fabricate, produce, test and supervise electronic equipments for Industries.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Development of robots and other types of automation.</li>
+        </ul>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>B.Tech (Electrical & Electronics Engineering)
+
+            </strong></h2>
+        <p style="font-size: 20px; color: gray; ">It deals with the basic principles and detailed analysis of different types of equipments and systems for generation, transmission, distribution and utilization of Electrical Energy. The course also covers the study of electronic devices and circuits involved in measurement, instrumentation, control and protection of electrical equipments and conversion systems.
+
+        </p>
+        <h2 style="padding-bottom:20px; padding-top: 40px; color: gray;"><strong>Career Opportunities</strong></h2>
+        <ul style="font-size: 20px; color: gray; padding-top: 20px; padding-left: 30px;">
+            <li style="padding-bottom: 5px;">Electricity Boards</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Large industries as engineers and managers, responsible for installation, maintenance, operation of power handling equipments and systems.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Research establishments recruit electrical engineers as faculty, scientists & research associates.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">PSUs.</li>
+        </ul>
+</div>
+
+<div id="Eligibility" class="tabcontent">
+          <h2 style="padding-bottom:20px; padding-top: 40px; color: black;"><strong>Eligibility</strong></h2>
+
+    <p style="font-size: 20px; color: gray; ">The eligibility criteria required for applying to B.Tech course in india are:</p>
+    
+    <table style="color:green; padding:2%; border-collapse:separate; border-spacing:0 15px; ">
+        <tr style="padding:2%;">
+        <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;" >Direct</td>
+            <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">Intermediate P.C.M. with 50% marks (without Grace)</td>
+        </tr>
+        <tr>
+        <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">Through Counselling</td>
+            <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">Intermediate P.C.M. with 45% marks (without Grace)</td>
+        </tr>
+        <tr>
+        <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">Lateral (2nd Year) </td>
+        <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">B.Sc. (Math) with 50% marks (without Grace) or Three Years Diploma of Polytechnic.</td>
+        </tr>
+        <tr>
+        <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">Through Counselling</td>
+        <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">B.Sc. (Math) with 45% marks (without Grace) or Three Years Diploma of Polytechnic.</td>
+        </tr>
+        <tr>
+        <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">Direct</td>
+        <td style="padding:2%; border-right:hidden; text-align: center; background-color: #ff5e5e;">Graduation with 50% marks (without Grace) </td>
+        </tr>
+    </table>
+    
+    
+</div>
+        
+<div id="RD" class="tabcontent">
+          <h2 style="padding-bottom:20px; padding-top: 40px; color: black; font-size: 40px;"><strong>Required Documents</strong></h2>
+          <h2 style="padding-bottom:20px; padding-top: 40px; color: black;"><strong>Documents required while submitting application forms for BBA Programs:</strong></h2>
+    <p style="font-size: 20px; color: gray; ">Applicants are required to attach following documents with the application form:</p>
+    <ul style="font-size: 20px; color: gray; padding-top: 20px; padding-left: 30px;">
+            <li style="padding-bottom: 5px;">Mark sheet of Class X and XII.</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Birth certificate or School leaving certificate</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">ID proof (passport/ration card)</li>
+            <li style="padding-bottom: 5px; padding-top: 5px;">Domicile certificate</li>
+        </ul>
+    <p style="font-size: 20px; color: gray; padding-top: 5px; ">Applicants are required to carry original documents along with the photocopies while submitting the application forms for verification. All documents should be attested by the gazetted officer or any other authorized officials. They should also carry 3 passport size photographs.</p>
+    
+        </div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+        </div>
+
+
+   
+</body>
+</html> 

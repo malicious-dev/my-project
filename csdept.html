@@ -1,0 +1,725 @@
+<html>
+
+<head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #891f2a url("#");
+        }
+
+        .head {
+            height: 40px;
+            width: 100%;
+            background-color: #ba0328;
+            display: inline-block;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+            margin-left: 1%;
+        }
+
+        .dropbtn {
+            background-color: #ba0328;
+            color: white;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            font-family: Playfair Display;
+            margin-left: 13%;
+        }
+        .dropbtn:hover {
+            color: yellow;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ba0328;
+            min-width: 240px;
+            box-shadow: 0px 8px 16px 0px red;
+            z-index: 1;
+            margin-left: 10%;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            background-color: #ba0328;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ba0328;
+            color: yellow;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            color: yellow;
+        }
+
+        .dropdown:hover . {
+            background-color: white;
+            color: yellow;
+        }
+         divhead {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 120px;
+        }
+        
+        .f {
+            height: 30px;
+            width: 30px;
+            margin-left: 9%;
+            margin-top: 1px;
+            position: absolute;
+        }
+
+        #head1 {
+            height: 120px;
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+
+        divhead1 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        .#note {
+            text-align: center;
+            float: right;
+            background-color: #3bba7f;
+            text-decoration-color: white;
+            width: 10%;
+            height: 34%;
+            font-size: 11px;
+            border-radius: 10px 0px 0px 10px;
+            margin-top: 31px;
+            font-family: ubuntu;
+            -webkit-transition: width 2000s;
+            transition: width 2s;
+
+        }
+
+        .#dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: green;
+            color: black;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .#note:hover .dropdown-content {
+            display: block;
+        }
+
+        #div.note {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+        }
+
+        ##div.note:hover {
+            width: 10%;
+            background-color: gray;
+            color: white;
+            border-radius: 0px 0px 0px 0px;
+        }
+
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1100px;
+            min-height: 500px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+
+        #preloader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            overflow: visible;
+            background: black url('text-animation-1s-411x151px.gif') no-repeat center center;
+        }
+
+        #content {
+            display: none;
+        }
+
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+
+        #Home {
+            background-color: white;
+        }
+
+        #News {
+            background-color: white;
+        }
+
+        #Contact {
+            background-color: white;
+        }
+
+        #About {
+            background-color: white;
+        }
+
+        .course {
+            width: 100%;
+            height: 600px;
+            background:#87021d url("#");
+
+        }
+
+        
+        ul {
+            position: absolute;
+            top: 230%;
+            left: 20%;
+            transform: translate(-50%,-50%);
+            margin: 0;
+            padding: 0;
+            displa: inline;
+        }
+        ul li {
+            list-style: none;
+            margin: 0 40px;
+        }
+        ul li a .btech {
+            font-size: 40px;
+            color: white;
+            line-height: 80px;
+            transition: .5s;
+        }
+        ul li a {
+            position: relative;
+            display: block;
+            width: 120px;
+            height: 80px;
+            background: #87021d;
+            text-align: center;
+            transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+            transition: .5s;
+            box-shado: -20px 20px 10px rgba(0,0,0,.5);
+	text-decoration: none;
+	color: white;
+        }
+        ul li a:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            height: 100%;
+            width: 20px;
+            background: white;
+            transition: .5s;
+            transform: rotate(0deg) skewY(-45deg);
+        }
+        ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -10px;
+            height: 20px;
+            width: 100%;
+            background: white;
+            transition: .5s;
+            transform: rotate(0deg) skewX(-45deg);
+        }
+        ul li a:hover {
+            transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
+            box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+        }
+        ul li:hover .btech {
+            color: black;
+        }
+        ul li:hover:nth-child(1) a
+        {
+            background: #f2f4f9;    
+        }
+        ul li:hover:nth-child(1) a:before
+        {
+            background: #f2f4f9;    
+        }
+        ul li:hover:nth-child(1): a:after
+        {
+            background: #f2f4f9;    
+        }
+
+	.footer {
+	height: 550px;
+	width: 100%;
+	background-color: #d6d9db;
+        top: 300%;
+        position: absolute;
+	}
+	.footer1 {
+	position: relative;
+	height: 360px;
+	width: 300px;
+	top:	1%;
+	padding-left: 40px;
+	background-color: #d6d9db;
+	left: 30px;
+	}	
+	.footer2 {
+	position: absolute;
+	height: 530px;
+	width: 300px;
+	top:	1%;
+	padding-left: 40px;
+	background-color: #d6d9db;
+	left: 365px;
+	}	
+.footer3 {
+	position: absolute;
+	height: 360px;
+	width: 300px;
+	top:	1%;
+	padding-left: 40px;
+	background-color: #d6d9db;
+	left: 700px;
+	}	
+.footer4 {
+	position: absolute;
+	height: 360px;
+	width: 300px;
+	top:	1%;
+	padding-left: 40px;
+	background-color: #d6d9db;
+	left: 1030px;
+	}	
+	.footer1:hover {
+	color: red;
+	box-shadow: 20px 20px 10px 10px rgba(0,0,0,.5);	
+	}
+	.footer1a {
+	color: black;	
+	}
+	.footer1a:hover {
+	color: red;
+	}
+.footer2:hover {
+	color: red;
+	box-shadow: 20px 20px 10px 10px rgba(0,0,0,.5);	
+	}
+	.footer2a {
+	color: black;	
+	}
+	.footer2a:hover {
+	color: red;
+	}
+.footer3:hover {
+	color: red;
+	box-shadow: 20px 20px 10px 10px rgba(0,0,0,.5);	
+	}
+	.footer3a {
+	color: black;	
+	}
+	.footer3a:hover {
+	color: red;
+	}
+.footer4:hover {
+	color: red;
+	box-shadow: 20px 20px 10px 10px rgba(0,0,0,.5);	
+	}
+	.footer4a {
+	color: black;	
+	}
+	.footer4a:hover {
+	color: red;
+	}
+
+.columns {
+            float: left;
+            width: 23%;
+            padding: 8px;
+            margin-left: 20px;
+            margin-top: 60px;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+
+        }
+
+        .price {
+            list-style-type: none;
+            border: 1px solid #eee;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+        .price:hover {
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+        }
+
+        .price .header {
+            background-color: #9878e8;
+            color: white;
+            font-size: 25px;
+            border-radius: 10px 10px 0px 0px;
+        }
+div.columns {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding-top: 150px;
+
+        }
+    </style>
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+    </script>
+    <script>
+        var preloader;
+
+        function preload(opacity) {
+            if (opacity <= 0) {
+                showContent();
+            } else {
+                preloader.style.opacity = opacity;
+                window.setTimeout(function() {
+                    preload(opacity - 1)
+                }, 800);
+            }
+        }
+
+        function showContent() {
+            preloader.style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            preloader = document.getElementById('preloader');
+            preload(1);
+        });
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <div id="content">
+
+        <div Id="head1">
+            <h1 style="color: #ba0328; font-family: ubuntu; font-size: 35px; position: absolute; margin-top: 10px; left: 20px;">SHRI RAM MURTI SMARAK</h1>
+            <h2 style="color: white; position: absolute; top: 50px; left: 20px;">COLLEGE OF ENGINEERING & TECHNOLOGY</h2>
+            <h3 style="color: white; position: absolute; top: 80px; font-size: 20px; left: 20px;">BAREILLY</h3>
+            <h1 style="margin-left: 1000px; position: absolute;"> 
+            <img src="image.png" height="130px" width="100%">
+            </h1>
+        </div>
+
+        <div class="head">
+            <div class="dropdown">
+                <button class="dropbtn" style="color: yellow;">HOME</button>
+                <div class="dropdown-content">
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">ABOUT\US</button>
+                <div class="dropdown-content">
+                    <a href="#">Overview</a><hr>
+                    <a href="#">Our Inspiring Soul</a><hr>
+                    <a href="#">Chairman's Message</a><hr>
+                    <a href="#">Vision & Mission</a><hr>
+                    <a href="#">Collage Management</a><hr>
+                    <a href="#">Shri Ram Murti Smarak Trust</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">DEPARTMENTS</button>
+                <div class="dropdown-content">
+                    <a href="#">Dept.&nbspof&nbspComputer&nbspScience&nbsp&&nbspEngineering</a><hr>
+                    <a href="#">Dept.&nbspof&nbspElectronics&nbsp&&nbspCommunication&nbspEngineering</a><hr>
+                    <a href="#">Dept. of Electrical & Electronics Engineering</a><hr>
+                    <a href="#">Dept. of Mechanical Engineering</a><hr>
+                    <a href="#">Dept. of Information Technology</a><hr>
+                    <a href="#">College of Pharmacy</a><hr>
+                    <a href="#">MBA(Master of Business Administration)</a><hr>
+                    <a href="#">MCA(Master of Computer Application</a><hr>
+                    <a href="#">Dept. of Basic Science</a><hr>
+                    <a href="#">Dept. of Mathematics</a><hr>
+                    <a href="#">Faculty</a><hr>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">COURSES</button>
+                <div class="dropdown-content">
+                    <a href="#">UG Courses</a><hr>
+                    <a href="#">PG Courses</a><hr>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">ACADEMICS</button>
+                <div class="dropdown-content">
+                    <a href="#">Pedagogy</a><hr>
+                    <a href="#">Value Addition Programme</a><hr>
+                    <a href="#">Membership & Publication</a><hr>
+<a href="#">Acedamic Calendar</a><hr>
+<a href="#">Protorical Board</a><hr>
+<a href="#">Zero Period Activity Planner</a><hr>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">ADMISSIONS</button>
+                <div class="dropdown-content">
+                    <a href="#">Admission Procedure</a><hr>
+                    <a href="#">Eligibility Criteria</a><hr>
+                    <a href="#">Download Prospectus</a><hr>
+<a href="#">Reporting for UPSEE-2017</a><hr>
+<a href="#">Fee Structure For 2018 Batch(New Admission)</a><hr>
+<a href="#">Fee Structure(Existing Students)</a><hr>
+<a href="#">SRMS Hostel Fee Session 2018-19</a><hr>
+<a href="#">SRMS Hostel Fee Session 2017-18</a><hr>
+<a href="#">Anti-Ragging@SRMS</a><hr>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">R&D</button>
+                <div class="dropdown-content">
+                    <a href="#">Research Papers (Faculty)</a><hr>
+<a href="#">Conferences/Seminar/Symposium/Workshop(Faculty)</a><hr>
+<a href="#">Research Papers(Student)</a><hr>
+<a href="#">Conferences/Seminar/Symposium/Workshop(Student)</a><hr>
+<a href="#">Faculty Development Programme</a><hr>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">AWARDS&SCHOLARSHIP</button>
+                <div class="dropdown-content">
+                    <a href="#">Medals&nbsp&&nbspAwards</a><hr>
+                    <a href="#">Scholarships</a><hr>
+                    <a href="#">Stipend</a><hr>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">LIFE@SRMSCET</button>
+                <div class="dropdown-content">
+                    <a href="#">SRMS Hostel</a><hr>
+                    <a href="#">Sport Facilities</a><hr>
+                    <a href="#">Amenities</a><hr>
+<a href="#">Central Library</a><hr>
+<a href="#">Clubs</a><hr>
+<a href="#">Extra&nbspCurricular/Co&nbsp-&nbspCurricular&nbspActivities</a><hr>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">PLACEMENTS</button>
+                <div class="dropdown-content">
+                    <a href="#">Latest&nbspPlacements</a><hr>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">JOURNALS</button>
+                <div class="dropdown-content">
+                    <a href="#">Bizcraft</a><hr>
+                    <a href="#">Mathematics</a><hr>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="columns">
+        <ul class="price">
+            <li class="header"><strong>Quick Links</strong></li>
+            <li class="grey"><a href="#" style="text-decoration: none;">Course Overview</a></li>
+            <li class="grey"><a href="#" style="text-decoration: none;">Eligibility</a></li>
+            <li class="grey"><a href="#" style="text-decoration: none;">Course Fee</a></li>
+            <li class="grey"><a href="#" style="text-decoration: none;">Required Documents</a></li>
+        </ul>
+    </div>
+        <br>
+
+
+
+<div class="footer">
+<div class="footer1">
+	<h2 style="padding-bottom:10px; padding-left:0px; padding-top: 30px; color: #87021d; font-family:ubuntu; font-size:40px;"><strong>About Us</strong></h2><hr>
+        <th style="font-size: 30px; color: black; padding-top: 20px; padding-left: 0px;">
+            <td style="padding-bottom: 5px;"></td>
+	<li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer1a" href="#" style="text-decoration:none;">Overview</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer1a" href="#" style="text-decoration:none;">Our Inspiring Soul</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer1a" href="#" style="text-decoration:none;">Chairman's Message</a></li>
+	<li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer1a" href="#" style="text-decoration:none;">Vision & Mission</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer1a" href="#" style="text-decoration:none;">College Management</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer1a" href="#" style="text-decoration:none;">Shri Ram Murti Smarak Trust</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer1a" href="#" style="text-decoration:none;">Contact Us</a></li>
+           
+        </ul>
+</div>
+<div class="footer2">
+	<h2 style="padding-bottom:10px; padding-left:0px; padding-top: 30px; color: #87021d; font-family:ubuntu; font-size:40px;"><strong>Department</strong></h2><hr>
+        <th style="font-size: 30px; color: black; padding-top: 20px; padding-left: 0px;">
+            <td style="padding-bottom: 5px;"></td>
+	<li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer2a" href="#" style="text-decoration:none;">Dept. of Computer Science & Engineering</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer2a" href="#" style="text-decoration:none;">Dept. of Electronics & Communication Engineering</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer2a" href="#" style="text-decoration:none;">Dept. of Electrical & Electronics Engineering</a></li>
+	<li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer2a" href="#" style="text-decoration:none;">Dept. of Information Technology</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer2a" href="#" style="text-decoration:none;">Dept. of Mechnical Engineering</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer2a" href="#" style="text-decoration:none;">College of Pharmacy</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer2a" href="#" style="text-decoration:none;">MBA (Master of Bussiness Administration)</a></li><li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer2a" href="#" style="text-decoration:none;">MCA (Master of Computer Application)</a></li>
+           
+        </ul>
+</div>
+<div class="footer3">
+	<h2 style="padding-bottom:10px; padding-left:0px; padding-top: 30px; color: #87021d; font-family:ubuntu; font-size:40px;"><strong>Placements</strong></h2><hr>
+        <th style="font-size: 30px; color: black; padding-top: 20px; padding-left: 0px;">
+            <td style="padding-bottom: 5px;"></td>
+	<li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer3a" href="#" style="text-decoration:none;">Training Development & Placement</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer3a" href="#" style="text-decoration:none;">Student Development Programme</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer3a" href="#" style="text-decoration:none;">Guest Lectures</a></li>
+	<li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer3a" href="#" style="text-decoration:none;">Industrial Visits</a></li>
+            
+        </ul>
+</div>
+<div class="footer4">
+	<h2 style="padding-bottom:10px; padding-left:0px; padding-top: 30px; color: #87021d; font-family:ubuntu; font-size:40px;"><strong>Admissions</strong></h2><hr>
+        <th style="font-size: 30px; color: black; padding-top: 20px; padding-left: 0px;">
+            <td style="padding-bottom: 5px;"></td>
+	<li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer4a" href="#" style="text-decoration:none;">Admission Procedure</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer4a" href="#" style="text-decoration:none;">Eligibility Criteria</a></li>
+            <li style="padding-bottom: 5px; padding-top: 5px; font-size:20px;"><a  class="footer4a" href="#" style="text-decoration:none;">Fee Structure For 2019 Batch(New Admission)</a></li>
+           
+        </ul>
+</div>
+</div>
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
